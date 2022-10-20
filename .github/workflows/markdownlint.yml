@@ -8,6 +8,9 @@ on:
         type: string
         default: ".github/rules/markdownlint-default.json"
 
+env:
+  DEFAULT_RULES_LOCATION: /
+  LINTER_RULES_PATH: /
 
 jobs:
   build:
@@ -35,5 +38,5 @@ jobs:
           LINTER_RULES_PATH: /
           MARKDOWN_LINTER_RULES: /
           MARKDOWN_CONFIG_FILE: ${{ inputs.rules-path }}
-          #DEFAULT_BRANCH: ${{ env.GITHUB_REF_NAME }}
+          DEFAULT_BRANCH: ${{ env.GITHUB_REF_NAME }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
