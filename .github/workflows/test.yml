@@ -32,4 +32,3 @@ jobs:
           MARKDOWN_CONFIG_FILE: "/.github/rules/markdownlint-default.json"
           DEFAULT_BRANCH: ${{ env.GITHUB_REF_NAME }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-Footer
