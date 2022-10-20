@@ -6,7 +6,7 @@ on:
       rules-path:
         required: false
         type: string
-        default: ".github/rules/markdownlint-default.json"
+        default: "framtale/workflow_templates/.github/rules/markdownlint-default.json"
 
 
 jobs:
