@@ -3,7 +3,11 @@ name: Markdown Lint
 on:
   workflow_call:
     inputs:
-      rules-path:
+      linter-rules-path:
+        required: false
+        type: string
+        default: "/"
+      markdown-config-file:
         required: false
         type: string
         default: ".github/rules/markdownlint-default.json"
@@ -35,8 +39,8 @@ jobs:
           VALIDATE_MARKDOWN: true
           # Path to the file where the custom markdownlint rules are saved
           DEFAULT_RULES_LOCATION: /
-          LINTER_RULES_PATH: /
+          LINTER_RULES_PATH: ${{ inputs.linter-rules-path }}
           MARKDOWN_LINTER_RULES: /
-          MARKDOWN_CONFIG_FILE: ${{ inputs.rules-path }}
+          MARKDOWN_CONFIG_FILE: ${{ inputs.markdown-config-file }}
           DEFAULT_BRANCH: ${{ env.GITHUB_REF_NAME }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
