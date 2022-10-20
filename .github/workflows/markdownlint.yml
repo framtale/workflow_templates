@@ -10,7 +10,7 @@ on:
       markdown-config-file:
         required: false
         type: string
-        default: ".github/rules/markdownlint-default.json"
+        default: "markdownlint-default.json"
 
 env:
   DEFAULT_RULES_LOCATION: /
