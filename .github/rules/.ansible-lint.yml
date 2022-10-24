@@ -6,7 +6,3 @@ skip_list:
     - yaml[truthy]
     - package-latest
     - fqcn[action-core]
-
-warn_list:
-    - yaml[truthy]
-    - fqcn[action-core]
