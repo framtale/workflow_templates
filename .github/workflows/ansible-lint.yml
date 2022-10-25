@@ -26,7 +26,7 @@ jobs:
         uses: github/super-linter/slim@v4
         env:
           # Only parse new or edited files
-          VALIDATE_ALL_CODEBASE: false
+          VALIDATE_ALL_CODEBASE: true
           # Just validate for markdon files
           VALIDATE_ANSIBLE: true
           ANSIBLE_CONFIG_FILE: ${{ inputs.ansible-config-file }}
