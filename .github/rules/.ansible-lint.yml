@@ -6,6 +6,7 @@ skip_list:
   - yaml[truthy]
   - package-latest
   - fqcn
+  - fqcn-builtins
 
 warn_list:
   - experimental
