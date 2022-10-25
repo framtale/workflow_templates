@@ -1,0 +1,14 @@
+---
+skip_list:
+  - yaml[trailing-spaces]
+  - yaml[comments]
+  - yaml[new-line-at-end-of-file]
+  - yaml[truthy]
+  - package-latest
+  - fqcn
+  - fqcn-builtins
+
+warn_list:
+  - experimental
+  - no-changed-when
+  - no-relative-paths
