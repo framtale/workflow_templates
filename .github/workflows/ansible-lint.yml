@@ -18,10 +18,10 @@ jobs:
       # Runs a single command using the runners shell
       - name: Ansible Lint
         # Uses the slim image to speed up build time
-        uses: github/super-linter/slim@v4
+        uses: framtale/super-linter/slim@main
         env:
           # Only parse new or edited files
-          VALIDATE_ALL_CODEBASE: true
+          VALIDATE_ALL_CODEBASE: false
           # Just validate for markdon files
           VALIDATE_ANSIBLE: true
           ANSIBLE_DIRECTORY: .
