@@ -1,14 +1,45 @@
 ---
-skip_list:
-  - yaml[trailing-spaces]
-  - yaml[comments]
-  - yaml[new-line-at-end-of-file]
-  - yaml[truthy]
-  - package-latest
-  - fqcn
-  - fqcn-builtins
+##########################
+##########################
+## Ansible Linter rules ##
+##########################
+##########################
 
-warn_list:
-  - experimental
-  - no-changed-when
-  - no-relative-paths
+#############################
+# Exclude paths from linter #
+#############################
+# exclude_paths:
+
+########################
+# Make output parsable #
+########################
+parseable: true
+
+#######################
+# Set output to quiet #
+#######################
+quiet: true
+
+#####################
+# Path to rules dir #
+#####################
+# rulesdir:
+
+################
+# Tags to skip #
+################
+
+##################
+# Tags to follow #
+##################
+# tags:
+
+#############
+# Use rules #
+#############
+use_default_rules: true
+
+#################
+# Set verbosity #
+#################
+verbosity: 1
