@@ -32,6 +32,5 @@ jobs:
           ANSIBLE_CONFIG_FILE: ${{ inputs.ansible-config-file }}
           ANSIBLE_DIRECTORY: .
           # Path to the file where the custom markdownlint rules are saved
-          LINTER_RULES_PATH: /.github/rules/
           DEFAULT_BRANCH: ${{ env.GITHUB_REF_NAME }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
