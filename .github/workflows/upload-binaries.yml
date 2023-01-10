@@ -1,0 +1,26 @@
+name: Push artifacts
+on: 
+  repository_dispatch:
+    types: [build-and-upload]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Download artifacts
+      uses: actions/download-artifact@v2
+      with:
+        name: binaries
+        repository: repositoryA
+        ref: ${{ env.GITHUB_SHA }}
+    - name: Add files
+      run: |
+        git add path/to/binaries
+    - name: Commit
+      run: |
+        git commit -m "Add binary files"
+    - name: Push
+      run: |
+        git push
